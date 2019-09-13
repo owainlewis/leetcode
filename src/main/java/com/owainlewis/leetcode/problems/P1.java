@@ -38,7 +38,7 @@ public final class P1 {
     }
 
     /**
-     * Better performance using a HashMap <strong>O(1)</strong>
+     * O(1)
      *
      * @param nums An array of integers
      * @param target A target value
