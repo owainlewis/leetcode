@@ -17,10 +17,18 @@ import java.util.Map;
  *
  */
 public final class P1 {
+    /**
+     * O(N^2)
+     *
+     * @param nums An array of integers
+     * @param target A target value
+     * @return
+     */
     public int[] twoSumBruteForce(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i]+nums[j] == target) {
+                int complement = target - nums[i];
+                if (nums[j] == complement) {
                     return new int[]{i,j};
                 }
             }
@@ -29,13 +37,18 @@ public final class P1 {
         return new int[]{};
     }
 
+    /**
+     * Better performance using a HashMap <strong>O(1)</strong>
+     *
+     * @param nums An array of integers
+     * @param target A target value
+     * @return an array of length two or empty array
+     */
     public int[] twoSumHash(int []nums, int target) {
         Map<Integer, Integer> m = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             m.put(nums[i], i);
         }
-
-        System.out.println(m);
 
         for(int i = 0; i < nums.length; i++) {
           int complement = target - nums[i];
