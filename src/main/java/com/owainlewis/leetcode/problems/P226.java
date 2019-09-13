@@ -16,8 +16,8 @@ import com.owainlewis.leetcode.supporting.TreeNode;
  *  / \   / \
  * 1   3 6   9
  * </pre>
- * 
- * <strong>Output</strong>:
+ *
+ * <strong>Output:</strong>
  * <pre>
  *
  *      4
