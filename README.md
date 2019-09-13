@@ -1,3 +1,3 @@
-== Leet Code
+# Leet Code
 
-Programming exercises from leetcode.com for fun.
+Programming exercises from leetcode for fun.
