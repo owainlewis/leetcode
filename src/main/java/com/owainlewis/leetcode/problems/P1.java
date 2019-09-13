@@ -22,7 +22,7 @@ public final class P1 {
      *
      * @param nums An array of integers
      * @param target A target value
-     * @return
+     * @return an array of length two or empty array
      */
     public int[] twoSumBruteForce(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
