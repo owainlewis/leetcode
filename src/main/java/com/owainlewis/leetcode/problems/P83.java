@@ -1,4 +1,7 @@
 package com.owainlewis.leetcode.problems;
+
+import com.owainlewis.leetcode.supporting.ListNode;
+
 /**
  * Given a sorted linked list, delete all duplicates such that each element appear only once.
  *
@@ -17,15 +20,6 @@ package com.owainlewis.leetcode.problems;
  * </pre>
  */
 public final class P83 {
-    public static class ListNode {
-        int val;
-
-        ListNode next;
-
-        ListNode(int x) {
-            this.val = x;
-        }
-    }
 
     public ListNode deleteDuplicates(ListNode head) {
         ListNode current = head;
