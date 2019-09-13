@@ -7,21 +7,25 @@ import com.owainlewis.leetcode.supporting.TreeNode;
  *
  * Example:
  *
- * Input:
+ * <strong>Input:</strong>
+ * <pre>
  *
  *      4
  *    /   \
  *   2     7
  *  / \   / \
  * 1   3 6   9
- * Output:
+ * </pre>
+ * 
+ * <strong>Output</strong>:
+ * <pre>
  *
  *      4
  *    /   \
  *   7     2
  *  / \   / \
  * 9   6 3   1
- *
+ *</pre>
  */
 public final class P226 {
 
