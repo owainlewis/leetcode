@@ -8,21 +8,21 @@ import java.util.Map;
  *
  * You may assume that each input would have exactly one solution, and you may not use the same element twice.
  *
- * <code>
+ * <pre>
  * Given nums = [2, 7, 11, 15], target = 9,
  *
  * Because nums[0] + nums[1] = 2 + 7 = 9,
  * return [0, 1].
- * </code>
+ * </pre>
+ *
+ * @see <a href="https://leetcode.com/problems/two-sum/">Two Sum</a>
  *
  */
 public final class P1 {
     /**
      * O(N^2)
      *
-     * @param nums An array of integers
-     * @param target A target value
-     * @return an array of length two or empty array
+     * @see <a href=""></a>
      */
     public int[] twoSumBruteForce(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
