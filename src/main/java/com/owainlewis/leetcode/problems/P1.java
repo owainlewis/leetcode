@@ -20,9 +20,9 @@ import java.util.Map;
  */
 public final class P1 {
     /**
-     * O(N^2)
+     * O(N^2) solution
      *
-     * @see <a href=""></a>
+     * @see <a href="https://leetcode.com/problems/two-sum/">Two sum</a>
      */
     public int[] twoSumBruteForce(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
@@ -38,11 +38,9 @@ public final class P1 {
     }
 
     /**
-     * O(1)
+     * O(1) solution
      *
-     * @param nums An array of integers
-     * @param target A target value
-     * @return an array of length two or empty array
+     * @see <a href="https://leetcode.com/problems/two-sum/">Two sum</a>
      */
     public int[] twoSumHash(int []nums, int target) {
         Map<Integer, Integer> m = new HashMap<>();
