@@ -51,7 +51,6 @@ public final class P1 {
         for(int i = 0; i < nums.length; i++) {
           int complement = target - nums[i];
           if (m.containsKey(complement)) {
-              System.out.println(m.get(complement));
               return new int[]{i, m.get(complement)};
           }
         }
