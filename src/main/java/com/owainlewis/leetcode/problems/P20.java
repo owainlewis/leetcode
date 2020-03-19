@@ -1,6 +1,9 @@
 package com.owainlewis.leetcode.problems;
 
+import javax.swing.text.html.Option;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 import java.util.Stack;
 
 /**
@@ -26,17 +29,19 @@ import java.util.Stack;
  */
 public final class P20 {
 
-    private HashMap<Character, Character> mappings;
+    private Map<Character, Character> mappings;
 
     public P20 () {
-        this.mappings = new HashMap<>();
-        this.mappings.put(')', '(');
-        this.mappings.put(']', '[');
-        this.mappings.put('}', '{');
+        this.mappings = Map.of(')', '(', ']', '[', '}', '{');
     }
 
     public boolean isOpeningParen(Character c) {
         return c == '(' || c == '[' || c == '{';
+    }
+
+    public Optional<Character> optionalPop(Stack<Character> s) {
+        if (s.isEmpty()) return Optional.empty();
+        return Optional.of(s.pop());
     }
 
     public boolean isValid(String s) {
@@ -44,8 +49,10 @@ public final class P20 {
         for (Character c : s.toCharArray()) {
             // If this is a closing paren ...
             if (this.mappings.containsKey(c)) {
-                char topElement = stack.empty() ? '@' : stack.pop();
-                if (topElement != this.mappings.get(c)) {
+                Optional<Character> topElement = stack.empty() ?
+                        Optional.empty() :
+                        Optional.of(stack.pop());
+                if (!topElement.equals(Optional.of(this.mappings.get(c)))) {
                     return false;
                 }
             } else {
